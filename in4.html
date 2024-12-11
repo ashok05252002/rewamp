@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>in4</title>
+  <link rel="stylesheet" href="/src/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.css" rel="stylesheet">
+  <script src="//unpkg.com/alpinejs" defer="defer"></script>
+
+</head>
+<header class="bg-white shadow-md text-gray-600 sticky top-0 z-50 px-4">
+                    <div class="container mx-auto flex justify-between items-center py-4">
+                      <!-- Left section: Logo -->
+                      <div class="flex items-center">
+                        <img src="src/in4images/logo.jpg" alt="Logo" class="h-14 w-auto mr-4">
+                      </div>
+                  
+                      <!-- Hamburger menu (for mobile) -->
+                      <div class="flex md:hidden">
+                        <button id="hamburger" class="text-black focus:outline-none">
+                          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                          </svg>
+                        </button>
+                      </div>
+                  
+                      <!-- Center section: Menu -->
+                      <nav class="hidden md:flex md:flex-grow justify-center">
+                        <ul class="flex justify-center space-x-6">
+                          <li><a href="#home" class="hover:text-[#007bff] font-bold">Home</a></li>
+                          <li><a href="#aboutus" class="hover:text-[#007bff] font-bold">About us</a></li>
+                          <li><a href="#solutions" class="hover:text-[#007bff] font-bold">Solutions</a></li>
+                  
+                          <!-- Dropdown for Products -->
+                          <li class="group relative">
+                            <a href="javascript:void(0)" class="hover:text-[#007bff] text-gray-600 font-bold block">
+                              Products
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="ml-1 inline-block" viewBox="0 0 24 24">
+                                <path d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z" />
+                              </svg>
+                            </a>
+                            <ul class="absolute shadow-lg bg-white space-y-3 lg:top-5 -left-6 min-w-[250px] z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
+                              <li class="border-b py-2"><a href="javascript:void(0)" class="hover:text-[#007bff] text-gray-600 text-[15px] font-bold block">Pro-people</a></li>
+                              <li class="border-b py-2"><a href="javascript:void(0)" class="hover:text-[#007bff] text-gray-600 text-[15px] font-bold block">Pro-visiter</a></li>
+                            </ul>
+                          </li>
+                  
+                          <li><a href="#support" class="hover:text-[#007bff] font-bold">Support</a></li>
+                          <li><a href="#contact" class="hover:text-[#007bff] font-bold">Contact</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </header>
+                  
+                  <!-- Mobile menu -->
+                  <nav id="mobile-menu" class="mobile-menu hidden flex-col items-center space-y-8 md:hidden px-8">
+                    <ul class="w-full text-center">
+                      <li class="border-b border-gray-300 py-4"><a href="#home" class="hover:text-[#007bff] font-bold">Home</a></li>
+                      <li class="border-b border-gray-300 py-4"><a href="#aboutus" class="hover:text-[#007bff] font-bold">About us</a></li>
+                      <li class="border-b border-gray-300 py-4"><a href="#solutions" class="hover:text-[#007bff] font-bold">Solutions</a></li>
+                  
+                      <!-- Mobile Dropdown for Products -->
+                      <li class="border-b border-gray-300 py-4 relative group">
+                        <button class="hover:text-[#007bff] font-bold">Products</button>
+                        <div class="absolute left-0 hidden mt-2 space-y-2 bg-gray-800 p-4 rounded-md group-hover:block">
+                          <a href="javascript:void(0)" class="block text-white hover:text-[#007bff]">Pro-people</a>
+                          <a href="javascript:void(0)" class="block text-white hover:text-[#007bff]">Pro-visiter</a>
+                        </div>
+                      </li>
+                  
+                      <li class="border-b border-gray-300 py-4"><a href="#support" class="hover:text-[#007bff] font-bold">Support</a></li>
+                      <li class="py-4"><a href="#contact" class="hover:text-[#007bff] font-bold">Contact</a></li>
+                    </ul>
+                  </nav>
+                  
+                  <script>
+                    // Toggle mobile menu visibility
+                    document.getElementById('hamburger').addEventListener('click', function() {
+                      const menu = document.getElementById('mobile-menu');
+                      menu.classList.toggle('hidden');  // Toggle the mobile menu visibility
+                    });
+                  </script>
+                  
+                  
+                  <!-- Mobile menu -->
+                  <nav id="mobile-menu" class="mobile-menu hidden flex-col items-center space-y-8 md:hidden px-8">
+                    <ul class="w-full text-center">
+                      <li class="border-b border-gray-300 py-4"><a href="#home" class="hover:text-secondary font-bold">Home</a></li>
+                      <li class="border-b border-gray-300 py-4"><a href="#aboutus" class="hover:text-secondary font-bold">About us</a></li>
+                      <li class="border-b border-gray-300 py-4"><a href="#results" class="hover:text-secondary font-bold">Solutions</a></li>
+                  
+                      <!-- Mobile Dropdown for Portfolio -->
+                      <li class="border-b border-gray-300 py-4 relative group">
+                        <button class="hover:text-secondary font-bold">Portfolio</button>
+                        <div class="absolute left-0 hidden mt-2 space-y-2 bg-gray-800 p-4 rounded-md group-hover:block">
+                          <a href="#web" class="block text-white hover:text-secondary">Pro-people</a>
+                          <a href="#graphics" class="block text-white hover:text-secondary">Pro-vister</a>
+                        </div>
+                      </li>
+                  
+                      <li class="border-b border-gray-300 py-4"><a href="#team" class="hover:text-secondary font-bold">Support</a></li>
+                      <li class="py-4"><a href="#contact" class="hover:text-secondary font-bold">Contact Us</a></li>
+                    </ul>
+                  </nav>
+                 
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                      const hamburger = document.getElementById('hamburger');
+                      const mobileMenu = document.getElementById('mobile-menu');
+                      
+                      // Toggle mobile menu visibility
+                      hamburger.addEventListener('click', function() {
+                        mobileMenu.classList.toggle('hidden');  // Show or hide the mobile menu
+                      });
+                    });
+                  </script>
+                 
+               
+                 
+                  

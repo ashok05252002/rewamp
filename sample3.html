@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Compact Product Section</title>
+    <script>
+        // JavaScript to handle the search functionality
+        function filterProducts() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+            let confirmedCount = 0;
+            let rejectedCount = 0;
+
+            productCards.forEach(card => {
+                const productName = card.querySelector('h3').textContent.toLowerCase();
+                const status = card.querySelector('.status-label').textContent.toLowerCase();
+                
+                if (productName.includes(searchTerm)) {
+                    card.style.display = 'block'; // Show the card
+                    // Count Confirmed and Rejected
+                    if (status.includes('confirmed')) {
+                        confirmedCount++;
+                    } else if (status.includes('rejected')) {
+                        rejectedCount++;
+                    }
+                } else {
+                    card.style.display = 'none'; // Hide the card
+                }
+            });
+
+            // Update the displayed counts
+            document.getElementById('confirmedCount').textContent = confirmedCount;
+            document.getElementById('rejectedCount').textContent = rejectedCount;
+        }
+
+        // Function to handle Confirm/Reject button actions
+        function changeStatus(event, status) {
+            const card = event.target.closest('.product-card');
+            const statusLabel = card.querySelector('.status-label');
+            
+            if (status === 'confirmed') {
+                statusLabel.textContent = 'Confirmed';
+                statusLabel.classList.remove('bg-yellow-100', 'text-yellow-800');
+                statusLabel.classList.add('bg-green-100', 'text-green-800');
+            } else if (status === 'rejected') {
+                statusLabel.textContent = 'Rejected';
+                statusLabel.classList.remove('bg-yellow-100', 'text-yellow-800');
+                statusLabel.classList.add('bg-red-100', 'text-red-800');
+            }
+
+            // Recalculate confirmed and rejected counts
+            filterProducts();
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto p-6">
+        <!-- Breadcrumbs -->
+        <nav class="text-sm text-gray-500 mb-6">
+            <ol class="flex items-center space-x-2">
+                <li><a href="#" class="text-blue-500 hover:underline">Home</a></li>
+                <li>&gt;</li>
+                <li><a href="#" class="text-blue-500 hover:underline">Masters</a></li>
+                <li>&gt;</li>
+                <li class="text-gray-700">Orders</li>
+            </ol>
+        </nav>
+
+        <!-- Page Header -->
+        <div class="flex justify-between items-center mb-8">
+            <button class="flex items-center text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700">
+                &larr; Back
+            </button>
+            <h1 class="text-2xl font-bold text-gray-800">Product Overview</h1>
+        </div>
+
+        <!-- Redesigned Section -->
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <div class="flex flex-wrap justify-between items-center border-b pb-4 mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">Products</h2>
+                <div>
+                    <input type="text" id="searchInput" placeholder="Search..." class="border border-gray-300 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-blue-500" oninput="filterProducts()">
+                </div>
+            </div>
+
+            <!-- Status Counts -->
+            <div class="flex justify-between mb-4">
+                <p class="text-sm text-gray-700">Confirmed: <span id="confirmedCount">0</span></p>
+                <p class="text-sm text-gray-700">Rejected: <span id="rejectedCount">0</span></p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Product Card 1 -->
+                <div class="product-card relative bg-gray-50 border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow">
+                    <div class="absolute top-2 right-2">
+                        <span class="status-label px-2 py-1 text-xs bg-yellow-100 text-yellow-800 rounded-full">Initiate</span>
+                    </div>
+                    <img src="src/images/png-transparent-vector-motorcycle-spares-concept-thumbnail.png" alt="Product Image" class="w-24 h-24 object-cover rounded-lg mb-3">
+                    <h3 class="text-sm font-semibold text-gray-800">HEAD COMP CYLINDER</h3>
+                    <p class="text-xs text-gray-500">Part: <span class="font-medium">801625</span></p>
+                    <p class="text-xs text-gray-500">Sub Part: <span class="font-medium">801625122</span></p>
+                    <div class="mt-2">
+                        <p class="text-gray-600 text-xs">Quantity: <span class="font-medium">1</span></p>
+                        <p class="text-gray-600 text-xs">Amount: <span class="font-medium">$2300.00</span></p>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                        <button class="px-3 py-1 bg-green-600 text-white text-xs rounded-lg hover:bg-green-500" onclick="changeStatus(event, 'confirmed')">Confirm</button>
+                        <button class="px-3 py-1 bg-red-600 text-white text-xs rounded-lg hover:bg-red-500" onclick="changeStatus(event, 'rejected')">Reject</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card relative bg-gray-50 border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow">
+                    <div class="absolute top-2 right-2">
+                        <span class="status-label px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">Confirmed</span>
+                    </div>
+                    <img src="src/images/png-transparent-vector-motorcycle-spares-concept-thumbnail.png" alt="Product Image" class="w-24 h-24 object-cover rounded-lg mb-3">
+                    <h3 class="text-sm font-semibold text-gray-800">VALVE ASSY</h3>
+                    <p class="text-xs text-gray-500">Part: <span class="font-medium">602314</span></p>
+                    <p class="text-xs text-gray-500">Sub Part: <span class="font-medium">602314897</span></p>
+                    <div class="mt-2">
+                        <p class="text-gray-600 text-xs">Quantity: <span class="font-medium">2</span></p>
+                        <p class="text-gray-600 text-xs">Amount: <span class="font-medium">$1150.00</span></p>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                        <button class="px-3 py-1 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-500">Reorder</button>
+                        <button class="px-3 py-1 bg-gray-600 text-white text-xs rounded-lg hover:bg-gray-500">Cancel</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card relative bg-gray-50 border border-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow">
+                    <div class="absolute top-2 right-2">
+                        <span class="status-label px-2 py-1 text-xs bg-red-100 text-red-800 rounded-full">Rejected</span>
+                    </div>
+                    <img src="src/images/png-transparent-vector-motorcycle-spares-concept-thumbnail.png" alt="Product Image" class="w-24 h-24 object-cover rounded-lg mb-3">
+                    <h3 class="text-sm font-semibold text-gray-800">BRAKE PAD SET</h3>
+                    <p class="text-xs text-gray-500">Part: <span class="font-medium">453612</span></p>
+                    <p class="text-xs text-gray-500">Sub Part: <span class="font-medium">453612090</span></p>
+                    <div class="mt-2">
+                        <p class="text-gray-600 text-xs">Quantity: <span class="font-medium">4</span></p>
+                        <p class="text-gray-600 text-xs">Amount: <span class="font-medium">$400.00</span></p>
+                    </div>
+                    <div class="flex justify-between items-center mt-2">
+                        <button class="px-3 py-1 bg-gray-600 text-white text-xs rounded-lg hover:bg-gray-500">Reorder</button>
+                        <button class="px-3 py-1 bg-gray-600 text-white text-xs rounded-lg hover:bg-gray-500">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

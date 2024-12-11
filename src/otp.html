@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Hover Text</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.css" rel="stylesheet">
+  <script src="//unpkg.com/alpinejs" defer="defer"></script>
+</head>
+<header class='flex border-b border-1 bg-indigo-700 font-sans min-h-[70px] tracking-wide relative z-50'>
+  <div class='w-full flex flex-wrap items-center justify-start gap-6 px-10 py-3 relative'>
+    <a href="javascript:void(0)"><img src="images/royal.jpeg" alt="logo" class='w-36 ' />
+    </a>
+
+    <div id="collapseMenu"
+      class='max-lg:hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ml-44 flex justify-center items-center lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50'>
+      <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+          <path
+            d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+            data-original="#000000"></path>
+          <path
+            d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+            data-original="#000000"></path>
+        </svg>
+      </button>
+
+      <ul
+        class='lg:flex lg:ml-10 lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-3/4 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+        <li class='max-lg:border-b max-lg:pb-4 px-3 lg:hidden'>
+          <a href=""><img src="src/images/Pro-People__Black_-removebg-preview (1).png" alt="logo" class='w-36' />
+          </a>
+        </li>
+        <li class='max-lg:border-b max-lg:px-3 max-lg:py-2'><a href='index.html'
+            class='hover:text-[#007bff] text-[#f1f3f4] font-bold text-sm block'>Home</a></li>
+        <li class='group text-[14px] max-lg:border-b max-lg:px-3 max-lg:py-2 relative'>
+          <a href='javascript:void(0)'
+            class='hover:text-[#007bff] hover:fill-[#007bff] text-white font-bold text-[15px] block'>Products<svg
+              xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class="ml-1 inline-block"
+              viewBox="0 0 24 24">
+              <path
+                d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                data-name="16" data-original="#000000" />
+            </svg>
+          </a>
+          <div
+            class='absolute lg:top-5 max-lg:top-8 -left-6 z-50 md:flex overflow-y-auto shadow-lg  bg-white max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-8 group-hover:pb-8 group-hover:pt-6 transition-all duration-500'>
+            <div class="lg:min-w-[300px] w-auto max-lg:min-w-[140px]">
+              <h6 class="text-base text-[#007bff] font-bold"></h6>
+              <ul class='mt-3 pt-3 border-t border-1 space-y-3'>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='Pro-Sale.html' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Sales
+
+                    <p class="text-gray-400 text-sm">Sales Leads Management Software</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='Pro-People.html' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-People
+
+                    <p class="text-gray-400 text-sm">HRMS & Payroll Software</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='pro-Task.html' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Task
+
+                    <p class="text-gray-400 text-sm">Task Management Solution</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Project
+
+                    <p class="text-gray-400 text-sm">Project Management System</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="lg:min-w-[300px] w-auto max-lg:min-w-[140px]">
+              <h6 class="text-base text-[#007bff] font-bold"></h6>
+              <ul class='mt-3 pt-3 border-t border-1 space-y-3'>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Canteen
+
+                    <p class="text-gray-400 text-sm">Canteen Management System</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Biz
+
+                    <p class="text-gray-400 text-base">Inventory Management System</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Ticket
+
+                    <p class="text-gray-400 text-sm">Customer Support Software</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Visit
+
+                    <p class="text-gray-400 text-sm">Visitor's Management Software</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="lg:min-w-[300px] w-auto max-lg:min-w-[140px]">
+              <h6 class="text-base text-[#007bff] font-bold"></h6>
+              <ul class='mt-3 pt-3 border-t border-1 space-y-3'>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-School
+
+                    <p class="text-gray-400 text-sm">Students Academic Management software</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Pupil
+
+                    <p class="text-gray-400 text-sm">Learning Management System</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Assure
+
+                    <p class="text-gray-400 text-sm">Warranty, Claims Management Software</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+                <li class='max-lg:border-b py-1 rounded'>
+                  <a href='javascript:void(0)' class='hover:text-[#007bff] text-gray-500 font-bold text-sm block'>
+                    Pro-Parking
+
+                    <p class="text-gray-400 text-sm ">Parking management Solutions</p>
+                    <button class="bg-[#007bff] text-white px-4 py-2 text-sm rounded mt-2">Explore Features</button>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class='max-lg:border-b max-lg:px-3 max-lg:py-2'><a href='javascript:void(0)'
+            class='hover:text-[#007bff] text-white font-bold text-[15px] block'>AI Solutions</a></li>
+        <!-- Resources Dropdown Menu -->
+        <div class="relative" x-data="{ blogDropdown: false }" @mouseenter="blogDropdown = true"
+          @mouseleave="blogDropdown = false">
+          <a href="#"
+            class="max-lg:border-b max-lg:px-3 max-lg:py-2 hover:text-[#007bff] text-white font-bold text-[15px] block">
+            Resources
+            <!-- Icon for dropdown - hidden on small screens -->
+            <svg :class="{ 'rotate-180': blogDropdown }"
+              class="ml-1 w-4 h-4 transition-transform duration-200 hidden lg:inline-block"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div x-show="blogDropdown" x-transition:enter="transition ease-out duration-200"
+            x-transition:leave="transition ease-in duration-200"
+            class="absolute left-0 w-40 mt-2 bg-white shadow-lg rounded-lg z-20" x-cloak>
+            <a href="Blog.html"
+              class="block px-4 py-2 text-gray-950 rounded-full hover:bg-[#007bff] hover:text-white">Blog</a>
+            <a href="authors.html"
+              class="block px-4 py-2 text-gray-950 rounded-full hover:bg-[#007bff] hover:text-white">Authors</a>
+          </div>
+        </div>
+
+        <!-- Company Dropdown Menu -->
+        <div class="relative" x-data="{ contactDropdown: false }" @mouseenter="contactDropdown = true"
+          @mouseleave="contactDropdown = false">
+          <a href="#"
+            class="max-lg:border-b max-lg:px-3 max-lg:py-2 hover:text-[#007bff] text-white font-bold text-[15px] block">
+            Company
+            <!-- Icon for dropdown - hidden on small screens -->
+            <svg :class="{ 'rotate-180': contactDropdown }"
+              class="ml-1 w-4 h-4 transition-transform duration-200 hidden lg:inline-block"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div x-show="contactDropdown" x-transition:enter="transition ease-out duration-200"
+            x-transition:leave="transition ease-in duration-200"
+            class="absolute left-0 w-40 mt-2 bg-white shadow-lg rounded-lg z-20" x-cloak>
+            <a href="About us.html"
+              class="block px-4 py-2 text-black rounded-full hover:bg-[#007bff] hover:text-white">About Us</a>
+            <a href="#Contact Us"
+              class="block px-4 py-2 text-black rounded-full hover:bg-[#007bff] hover:text-white">Contact Us</a>
+          </div>
+        </div>
+
+
+    </div>
+
+    <div class='flex items-center ml-auto lg:hidden'>
+      <button id="toggleOpen">
+        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+</header>
+<body>
+
+
+  <section class="bg-gray-100 flex items-center justify-center h-auto">
+    <div class="relative w-4/5">
+      <!-- Carousel wrapper -->
+      <div class="overflow-hidden relative rounded-lg w-auto">
+        <div class="flex transition-transform duration-500 ease-in-out transform" id="carousel">
+          <!-- Slide 1 -->
+          <div class="min-w-full">
+            <img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/145655/x440-right-side-view-8.png?isig=0&q=80&wm=3" alt="Slide 1"
+              class="w-full h-full object-cover" />
+          </div>
+          <!-- Slide 2 -->
+          <div class="min-w-full">
+            <img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/103183/raider-125-right-side-view-20.png?isig=0&q=80&wm=3" alt="Slide 2"
+              class="w-full h-full object-cover" />
+          </div>
+          <!-- Slide 3 -->
+          <div class="min-w-full">
+            <img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/103795/r15-right-side-view-7.png?isig=0&q=80&wm=3" alt="Slide 3"
+              class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <button
+        class="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+        onclick="scrollCarousel(-1)">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button
+        class="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+        onclick="scrollCarousel(1)">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <script>
+    let currentIndex = 0;
+    const autoSlideInterval = 3000; // 3 seconds
+    const carousel = document.getElementById("carousel");
+
+    function scrollCarousel(direction) {
+      const totalSlides = carousel.children.length;
+      currentIndex =
+        (currentIndex + direction + totalSlides) % totalSlides;
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Auto-slide function
+    setInterval(() => {
+      scrollCarousel(1); // Move to the next slide
+    }, autoSlideInterval);
+
+    // Adjust carousel to screen width
+    window.addEventListener("resize", () => {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+  </script>
+
+
+  <section class="bg-gray-100 flex justify-center items-center h-auto">
+
+    <div class="font-sans mt-10 py-4 mx-auto lg:max-w-6xl md:max-w-4xl max-sm:max-w-md">
+      <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-12">Top Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-6 gap-12">
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/145655/x440-right-side-view-8.png?isig=0&q=80&wm=3"
+              alt="product1" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike </h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">$3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img
+              src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/49656/continental-gt-right-side-view-12.png?isig=0&q=80&wm=3"
+              alt="product2" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike</h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/55973/rs-200-right-side-view-2.png?isig=0&q=80&wm=3"
+              alt="product3" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike</h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img
+              src="https://imgd.aeplcdn.com/642x361/n/cw/ec/171071/yamaha-mt-15-left-front-three-quarter0.jpeg?isig=0&q=80"
+              alt="product4" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike</h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/103795/r15-right-side-view-7.png?isig=0&q=80&wm=3"
+              alt="product5" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike</h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img
+              src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/124013/hunter-350-right-side-view-5.png?isig=0&q=80&wm=3"
+              alt="product6" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike</h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/145655/x440-right-side-view-8.png?isig=0&q=80&wm=3"
+              alt="product7" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike</h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-100 p-3 rounded-lg group overflow-hidden cursor-pointer relative z-50 hover:before:bg-black before:absolute before:inset-0 before:opacity-20 before:transition-all">
+          <div class="w-full h-[300px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
+            <img
+              src="https://imgd.aeplcdn.com/1056x594/n/cw/ec/103183/raider-125-right-side-view-20.png?isig=0&q=80&wm=3"
+              alt="product8" class="h-full w-full object-contain" />
+          </div>
+
+          <div
+            class="absolute mx-auto left-0 right-0 -bottom-80 group-hover:bottom-2 bg-white w-11/12 p-3 rounded-lg transition-all duration-300">
+            <div class="text-center">
+              <h3 class="text-base font-bold text-gray-800">bike</h3>
+              <h4 class="text-lg text-blue-600 font-bold mt-2">3500000</h4>
+            </div>
+
+            <div class="flex justify-center space-x-1 mt-4">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="flex items-items justify-center max-md:flex-col  gap-y-6 gap-x-3 max-w-screen-lg mx-auto px-4 font-[sans-serif] mt-4">
+      <div class="overflow-hidden min-w-[250px] pr-[35px]">
+        <div class="bg-[#000842] h-[60px] py-2.5 px-6 rounded-md relative after:bg-[#000842] after:absolute after:h-[60px] after:w-[60px] after:top-0 after:-right-4 after:rotate-[46deg] after:rounded-sm">
+          <div class="relative z-10">
+            <h4 class="text-sm font-semibold text-white">Personal Info</h4>
+            <p class="text-xs text-gray-300">Step description here</p>
+          </div>
+        </div>
+      </div>
+      <div class="overflow-hidden min-w-[250px] pr-[35px]">
+        <div class="bg-gray-300 h-[60px] py-2.5 px-6 rounded-md relative after:bg-[#000842] after:absolute after:h-[60px] after:w-[60px] after:top-0 after:-right-4 after:rotate-[46deg] after:rounded-sm">
+          <div class="relative z-10">
+            <h4 class="text-sm font-semibold text-gray-500">Education Info</h4>
+            <p class="text-xs text-gray-500">Step description here</p>
+          </div>
+        </div>
+      </div>
+      <div class="overflow-hidden min-w-[250px] pr-[35px]">
+        <div class="bg-gray-300 h-[60px] py-2.5 px-6 rounded-md relative after:bg-[#000842] after:absolute after:h-[60px] after:w-[60px] after:top-0 after:-right-4 after:rotate-[46deg] after:rounded-sm">
+          <div class="relative z-10">
+            <h4 class="text-sm font-semibold text-gray-500">Payment Info</h4>
+            <p class="text-xs text-gray-500">Step description here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="bg-[#182b50] px-8 py-16 mt-10 font-[sans-serif]">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 justify-center items-center gap-12">
+        <!-- Text Section -->
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6 md:!leading-[55px]">Upgrade Your Ride</h2>
+          <p class="text-lg lg:text-xl text-white">
+            Take your biking experience to the next level with premium bike parts and accessories. Enhance performance and reliability!
+          </p>
+          <a href="javascript:void(0);" class="mt-12 bg-[#a91079] hover:bg-opacity-80 text-white py-3 px-6 rounded-full text-lg lg:text-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl inline-block">
+            Shop Now
+          </a>
+        </div>
+    
+        <!-- Image Section -->
+        <div class="text-center">
+          <img src="https://imgd.aeplcdn.com/642x361/n/cw/ec/171071/yamaha-mt-15-left-front-three-quarter0.jpeg?isig=0&q=80" alt="Bike Parts Upgrade" class="w-full mx-auto" />
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <section>
+    <div class="font-[sans-serif] mt-10">
+      <div class="max-w-5xl max-lg:max-w-3xl mx-auto">
+        <div class="text-center">
+          <h2 class="text-gray-800 text-3xl font-bold mb-3">Choose a Subscription</h2>
+          <p class="text-sm text-gray-500">Get the best bike parts delivered to you regularly</p>
+        </div>
+    
+        <div class="flex mx-auto mt-12 bg-gray-100 rounded-full max-w-[200px]">
+          <button class="text-white w-full text-sm bg-blue-600 py-2.5 px-5 rounded-full">
+            Basic</button>
+          <button
+            class="text-gray-500 w-full text-sm py-2.5 px-5 rounded-full">
+            Premium</button>
+        </div>
+    
+        <div class="grid lg:grid-cols-3 sm:grid-cols-2 gap-6 mt-6 max-sm:max-w-sm max-sm:mx-auto">
+          <!-- Starter Plan -->
+          <div class="shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-lg overflow-hidden transition-all duration-500 hover:scale-105">
+            <div class="h-32 bg-gray-700 text-center p-4">
+              <h3 class="text-2xl text-white mb-1">Starter</h3>
+              <p class="text-xs text-white">1 Month</p>
+            </div>
+    
+            <div class="h-24 w-24 mx-auto -mt-12 shadow-xl rounded-full bg-gray-700 text-white border-[3px] flex flex-col items-center justify-center border-white">
+              <h3 class="text-2xl">$25</h3>
+            </div>
+    
+            <div class="px-6 py-4 mt-4">
+              <ul class="space-y-4">
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  2 Sets of Brake Pads
+                </li>
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  Chain Lubricant (250 ml)
+                </li>
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  1 Tire Tube Replacement
+                </li>
+              </ul>
+    
+              <button type="button" class="w-full mt-8 px-5 py-2.5 text-sm text-white bg-gray-700 hover:bg-gray-800 rounded-full">Get Started</button>
+            </div>
+          </div>
+    
+          <!-- Professional Plan -->
+          <div class="shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-lg overflow-hidden transition-all duration-500 hover:scale-105 relative">
+            <span class="px-2 py-1 text-[10px] font-semibold text-white bg-orange-400 rounded-lg ml-3 absolute -left-4 top-0">Most popular</span>
+            <div class="h-32 bg-blue-600 text-center p-4">
+              <h3 class="text-2xl text-white mb-1">Professional</h3>
+              <p class="text-xs text-white">2 Months</p>
+            </div>
+    
+            <div class="h-24 w-24 mx-auto -mt-12 shadow-xl rounded-full bg-blue-600 text-white border-[3px] flex flex-col items-center justify-center border-white">
+              <p class="text-[10px] font-bold">Save 15%</p>
+              <h3 class="text-2xl">$45</h3>
+            </div>
+    
+            <div class="px-6 py-4 mt-4">
+              <ul class="space-y-4">
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  5 Sets of Brake Pads
+                </li>
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  Chain Lubricant (500 ml)
+                </li>
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  Tire Tube + Inner Liner
+                </li>
+              </ul>
+    
+              <button type="button" class="w-full mt-8 px-5 py-2.5 text-sm text-white bg-blue-600 hover:bg-blue-700 rounded-full">Subscribe</button>
+            </div>
+          </div>
+          <div class="shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] rounded-lg overflow-hidden transition-all duration-500 hover:scale-105">
+            <div class="h-32 bg-gray-700 text-center p-4">
+              <h3 class="text-2xl text-white mb-1"> Premium</h3>
+              <p class="text-xs text-white">1 Month</p>
+            </div>
+    
+            <div class="h-24 w-24 mx-auto -mt-12 shadow-xl rounded-full bg-gray-700 text-white border-[3px] flex flex-col items-center justify-center border-white">
+              <h3 class="text-2xl">$75</h3>
+            </div>
+    
+            <div class="px-6 py-4 mt-4">
+              <ul class="space-y-4">
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  10 Sets of Brake Pads
+                </li>
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  Chain Lubricant (1000 ml)
+                </li>
+                <li class="flex items-center text-sm text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" class="mr-3 bg-green-500 fill-white rounded-full p-[3px]" viewBox="0 0 24 24">
+                    <path d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z" data-original="#000000" />
+                  </svg>
+                  4 Tire Tube Replacement
+                </li>
+              </ul>
+    
+              <button type="button" class="w-full mt-8 px-5 py-2.5 text-sm text-white bg-gray-700 hover:bg-gray-800 rounded-full">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <section>
+    <div class="bg-gray-900 py-12 px-6 sm:px-12 lg:px-24">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Review Card 1 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-white hover:scale-105 transition transform duration-300">
+            <div class="flex items-center">
+              <div class="h-12 w-12 bg-gray-700 rounded-full flex items-center justify-center text-xl font-bold">A</div>
+              <div class="ml-4">
+                <h3 class="font-semibold">Alex Johnson</h3>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-300">"The ride experience has been fantastic! The bike is smooth, reliable, and a joy to use."</p>
+          </div>
+          <!-- Review Card 2 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-white hover:scale-105 transition transform duration-300">
+            <div class="flex items-center">
+              <div class="h-12 w-12 bg-gray-700 rounded-full flex items-center justify-center text-xl font-bold">M</div>
+              <div class="ml-4">
+                <h3 class="font-semibold">Maria Gomez</h3>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-300">"I love the sleek design and comfort of the bike. It's perfect for long rides."</p>
+          </div>
+          <!-- Review Card 3 -->
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-white hover:scale-105 transition transform duration-300">
+            <div class="flex items-center">
+              <div class="h-12 w-12 bg-gray-700 rounded-full flex items-center justify-center text-xl font-bold">S</div>
+              <div class="ml-4">
+                <h3 class="font-semibold">Samuel Lee</h3>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-300">"Good bike, but I wish it had more features for off-road adventures."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section>
+    <div class="bg-gray-500 font-[sans-serif] min-h-screen flex flex-col items-center justify-center py-6 px-4">
+      <div class="max-w-md w-full border p-8 rounded-md bg-gray-200">
+      <div>
+        <h2 class="text-gray-800 text-center text-2xl font-bold">Sign in</h2>
+      </div>
+        <form class="mt-12 space-y-4">
+          <div class="relative flex items-center">
+            <input name="username" type="text" required class="w-full text-sm text-gray-800 bg-white border-2 border-transparent focus:border-[#1E2772] px-4 py-3 rounded-md outline-none" placeholder="username" />
+          </div>
+    
+          <div class="relative flex items-center">
+            <input name="password" type="password" required class="w-full text-sm text-gray-800 bg-white border-2 border-transparent focus:border-[#1E2772] px-4 py-3 rounded-md outline-none" placeholder="password" />
+          </div>
+    
+          <div class="flex flex-wrap items-center justify-between gap-4 !mt-4">
+          
+            <div class="ml-auto">
+              <a href="javascript:void(0);" class="text-sm font-semibold text-[#1E2772] hover:underline" onclick="toggleModal()">
+                Forgot Password?
+              </a>
+            </div>
+          </div>
+    
+          <div class="!mt-12">
+            <button type="button" class="w-full py-2.5 px-4 text-base font-semibold rounded-md text-white bg-[#1E2772] hover:bg-[#1e4272] focus:outline-none">Log in</button>
+            <p class="text-sm mt-6 text-center text-gray-800">Don't have an account 
+              <a href="javascript:void(0);" class="text-[#1E2772] font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    
+      <!-- Modal -->
+      <div id="forgot-password-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-sm">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">Forgot Password</h2>
+          <p class="text-sm text-gray-600 mb-4">Enter your email address below, and we'll send you instructions to reset your password.</p>
+          <form>
+            <input type="email" placeholder="Email Address" class="w-full px-4 py-2 border rounded-md text-sm text-gray-800 outline-none focus:ring-2 focus:ring-[#1E2772]" required />
+            <button type="submit" class="mt-4 w-full py-2 px-4 text-base font-semibold rounded-md text-white bg-[#1E2772] hover:bg-[#1e4272]">Submit</button>
+          </form>
+          <button onclick="toggleModal()" class="mt-4 text-sm text-[#1E2772] font-semibold hover:underline">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleModal() {
+        const modal = document.getElementById('forgot-password-modal');
+        modal.classList.toggle('hidden');
+      }
+    </script>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Paused</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  
+
+<section class="bg-gray-100 flex justify-center items-center min-h-fit">
+  <div class="flex justify-center items-center min-h-fit">
+    <div class="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Header -->
+      <div class="bg-blue-900 text-white text-center py-6">
+        <img class="w-60 mx-auto" src="images/royal.jpeg" alt="Logo">
+      </div>
+      <!-- Title -->
+
+      <!-- Illustration -->
+      <div class="flex justify-center mb-6 w-1/2 items-center ml-28">
+        <img src="images/Loading-rafiki.svg" alt="Illustration">
+      </div>
+      <!-- Feedback Form -->
+      <div class=" rounded-lg p-6 max-w-sm text-center ml-7">
+        <div class="flex items-center justify-center ">
+          <!-- Pending Icon -->
+
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-2 ">Your Email is Pending</h2>
+        <p class="text-gray-600 mb-4">We are currently processing your email. Please check back shortly or refresh your
+          inbox.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+  </section>
+  <section>
+    <div class="flex justify-center bg-gray-100 items-center min-h-screen">
+      <div class="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Header -->
+        <div class="bg-blue-900 text-white text-center py-6">
+          <img class="w-60 mx-auto" src="images/royal.jpeg" alt="Logo">
+        </div>
+
+        <!-- Email Content -->
+        <div class="px-6 py-8">
+          <!-- Success Icon with Animation -->
+          <div class="flex items-center justify-center mb-6">
+            <span class="text-green-500 text-6xl">✅</span>
+          </div>
+
+          <!-- Title -->
+          <h2 class="text-center text-2xl font-semibold text-gray-800 mt-4">
+            Registration Successful!
+          </h2>
+
+          <!-- Message -->
+          <p class="text-center text-gray-600 mt-2">
+            Your account has been created successfully. You can now access your dashboard and start exploring our
+            services
+          </p>
+
+          <!-- Footer -->
+          <div class="bg-gray-200 text-center py-4 text-gray-600 text-sm">
+            <p>If you have questions regarding your data, please visit our <a href="#"
+                class="text-blue-500 hover:underline">Privacy Policy</a>.</p>
+            <p>© 2024 Company. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+<section>
+  <div class="flex justify-center bg-gray-100 items-center min-h-screen">
+    <div class="max-w-md w-full bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Header -->
+      <div class="bg-blue-900 text-white text-center py-6">
+        <img class="w-60 mx-auto" src="images/royal.jpeg" alt="Logo">
+      </div>
+
+      <!-- Email Content -->
+      <div class="px-6 py-8">
+        <div class="flex justify-center">
+          <img src="images/Fingerprint Security Logo.png" alt="Fingerprint Logo" class="w-24 h-24">
+        </div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Identity Verification Required!</h2>
+        <p class="text-gray-600 mb-6 text-center">
+          Hello, we recently detected an unusual activity on your account. To ensure its security, we require additional
+          verification. Please verify your identity by completing the process below.
+        </p>
+
+        <!-- Timer Section -->
+        <div class="text-center text-gray-800 font-medium mb-4">
+          <p>OTP is valid for <span id="timer" class="text-red-500 font-bold">02:00</span> minutes.</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="mb-6">
+          <p class="text-center text-gray-800 font-medium mb-2">Verification Progress</p>
+          <div class="bg-gray-300 rounded-full h-2 overflow-hidden">
+            <div id="progress-bar" class="bg-blue-500 h-2 rounded-full w-0"></div>
+          </div>
+        </div>
+
+        <!-- Bullet Points Section -->
+        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+          <li>Ensure your account remains secure and protected.</li>
+          <li>Use the provided OTP for verification within 5 minutes.</li>
+          <li>Contact customer support if you encounter any issues.</li>
+          <li>Do not share your OTP with anyone.</li>
+        </ul>
+
+        <!-- OTP Section -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Your OTP:</h3>
+          <div class="flex justify-center space-x-2">
+            <input type="text" maxlength="1"
+              class="w-12 h-12 text-center border rounded-md text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="text" maxlength="1"
+              class="w-12 h-12 text-center border rounded-md text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="text" maxlength="1"
+              class="w-12 h-12 text-center border rounded-md text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="text" maxlength="1"
+              class="w-12 h-12 text-center border rounded-md text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <!-- Verify Button -->
+        <div class="text-center mb-6">
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:ring-4 focus:ring-red-300">
+            Verify Identity
+          </button>
+        </div>
+
+        <!-- Success Message -->
+        <div class="hidden bg-green-100 border border-green-400 text-green-700 p-4 rounded-md" id="success-message">
+          <p class="font-semibold">Success!</p>
+          <p>Your identity has been verified successfully.</p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="bg-gray-200 text-center py-4 text-gray-600 text-sm">
+        <p>If you have questions regarding your data, please visit our <a href="#"
+            class="text-blue-500 hover:underline">Privacy Policy</a>.</p>
+        <p>© 2024 Company. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Script for Timer, OTP Auto-Population, and Progress Bar -->
+  <script>
+    // Timer for OTP validity
+    let timerElement = document.getElementById('timer');
+    let progressBar = document.getElementById('progress-bar');
+    let timeLeft = 120; // 2 minutes in seconds
+    let totalTime = timeLeft;
+
+    // OTP Auto-population
+    const otpInputs = document.querySelectorAll('input[type="text"]');
+    const generateOTP = () => {
+      let otp = '';
+      for (let i = 0; i < otpInputs.length; i++) {
+        otp += Math.floor(Math.random() * 10); // Random number for OTP
+      }
+      // Automatically populate the OTP inputs with new OTP
+      otpInputs.forEach((input, index) => {
+        input.value = otp[index];
+      });
+    };
+
+    // Update the timer and progress bar
+    const updateTimer = () => {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      if (timeLeft > 0) {
+        timeLeft--;
+        // Update progress bar width based on time left
+        const progress = ((totalTime - timeLeft) / totalTime) * 100;
+        progressBar.style.width = `${progress}%`;
+      }
+    };
+
+    // Start the timer
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    // Automatically generate OTP after a short delay (for demo purposes)
+    setTimeout(generateOTP, 500); // Auto-populate OTP after 500ms
+
+    // Success Message Example
+    const verifyButton = document.querySelector('button.bg-red-500');
+    const successMessage = document.getElementById('success-message');
+    verifyButton.addEventListener('click', () => {
+      successMessage.classList.remove('hidden');
+      clearInterval(timerInterval); // Stop the timer when OTP is verified
+    });
+  </script>
+
+
+</body>
+
+</html>

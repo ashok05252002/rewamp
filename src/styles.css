@@ -2,3 +2,241 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                .rotate-gradient {
+                    animation: spin 4s linear infinite;
+                    animation-timing-function: linear; /* Ensure constant speed */
+                }
+
+
+ /* main page :start */
+ #map {
+    width: 100%;
+    height: 100%;
+  }
+
+/* Container for the logo slider */
+.logos {
+    overflow: hidden;
+    position: relative;
+    height: 200px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style for the logos inside the container */
+  .logo_items {
+    display: flex;
+    gap: 20px; /* Adjust spacing between logos */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 20s; /* Adjust speed here */
+  }
+  
+  /* Left to right sliding animation */
+  @keyframes slide-left-to-right {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Right to left sliding animation */
+  @keyframes slide-right-to-left {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Apply the left-to-right animation to the first set */
+  .left_to_right {
+    animation-name: slide-left-to-right;
+  }
+  
+  /* Apply the right-to-left animation to the second set */
+  .right_to_left {
+    animation-name: slide-right-to-left;
+  }
+  
+  /* Style for the logo images */
+  .logo_items img {
+    height: 80px;
+    max-width: 100px; /* Maintain responsiveness */
+    object-fit: contain;
+  }
+  
+  /* Pause animation on hover */
+  .logos:hover .logo_items {
+    animation-play-state: paused;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .logo_items img {
+      height: 60px;
+      max-width: 80px;
+    }
+    .logos {
+      height: 150px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo_items img {
+      height: 50px;
+      max-width: 70px;
+    }
+    .logos {
+      height: 120px; /* Adjust height for even smaller screens */
+    }
+  }
+
+    /* Custom Card Shapes (Optional) */
+    .rounded-lg {
+        border-radius: 1.25rem;
+        /* Adjust to your design needs */
+    }
+
+    .shadow-2xl {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        /* Increase shadow for more depth */
+    }              
+
+ /* main page end  */
+/* pro people start */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+
+ .carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+
+
+
+
+/* Section Styling */
+.logo-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.logo-headline {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container Styling */
+.logos-container {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Track Animation */
+.logos-track {
+  display: flex;
+  gap: 30px; /* Space between logos */
+  animation: scroll 30s linear infinite; /* Adjust speed as needed */
+}
+
+.logos-container:hover .logos-track {
+  animation-play-state: paused; /* Pause on hover */
+}
+
+/* Logo Styling */
+.logos-track img {
+  height: 80px; /* Adjust logo height to fit perfectly */
+  max-height: 80px; /* Prevent logos from exceeding this size */
+  object-fit: contain; /* Maintain aspect ratio of logos */
+  object-position: center; /* Center logos within the space */
+  transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+.logos-track img:hover {
+  transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Keyframes for Seamless Sliding */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+.swiper-container {
+  height: 400px; /* or any height that suits your design */
+}
+
+
+
+.wave-divider {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .wave-divider svg {
+    height: 150px;
+  }
+}
+
+ /* pro people end */
+
+
+ /* pro-task start */
+ 
+
+
+
+
+
+  /* pro-task end */
